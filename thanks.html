@@ -144,11 +144,50 @@
         Your message is in the queue. We’ll review it and follow up as soon as we can.
         If you included a phone number or email, that’s where we’ll respond.
       </p>
+<form
+  action="https://formspree.io/f/mwvvewyq"
+  method="POST"
+  style="margin-top:18px"
+>
+  <label style="font-size:14px; font-weight:600; display:block; margin-bottom:6px;">
+    Add a quick follow-up (optional)
+  </label>
+
+  <textarea
+    name="followup_message"
+    rows="4"
+    placeholder="Forgot to mention something? Add it here."
+    style="
+      width:100%;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      font-family:inherit;
+      font-size:14px;
+      resize:vertical;
+    "
+  ></textarea>
+
+  <!-- Context so you know what this is -->
+  <input type="hidden" name="_subject" value="Urban Pools – Follow-Up Note" />
+  <input type="hidden" name="source" value="Thanks page follow-up" />
+
+  <!-- Optional: helps correlate if they reload -->
+  <input type="hidden" name="page" value="/thanks.html" />
+
+  <button
+    type="submit"
+    class="btn"
+    style="margin-top:10px"
+  >
+    Send follow-up
+  </button>
+</form>
 
       <div class="actions">
         <a class="btn primary" href="./">Back to Urban Pools</a>
         <a class="btn" href="./preseason/">Pre-Season Overview</a>
-        <a class="btn" href="./#contact">Send another note</a>
+        <a class="btn" href="./#contact">Anything else to add?</a>
       </div>
 
       <div class="mini">
