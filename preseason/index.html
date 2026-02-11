@@ -3,45 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pre-Season • Urban Pools Fort Wayne</title>
+  <meta name="description" content="Pre-season planning for vinyl liners, winter/safety covers, pool openings, and renovations in the Fort Wayne area." />
 
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <title>Pre-Season Coordinated Order | Urban Pools Fort Wayne</title>
-  <meta name="description" content="Vinyl liners + winter/safety covers in the Fort Wayne area. Plan early, avoid the rush, and reduce spring surprises." />
-  <link rel="stylesheet" href="../assets/site.css?v=5" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Site-wide styles -->
+  <link rel="stylesheet" href="../assets/site.css?v=3" />
+
+  <!-- Small page-specific tweaks (safe even if site.css changes) -->
   <style>
-    /* Page-only layout helpers (keeps shared CSS clean) */
-    .twoColPage{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:14px;
-      align-items:start;
-    }
-    .btnRow{display:flex; gap:10px; flex-wrap:wrap}
-    .bullets{margin:10px 0 0; padding-left:18px}
-    .bullets li{margin-bottom:6px}
-    .fineNote{margin:10px 0 0; color:var(--muted); font-size:14px}
-    .field{margin:12px 0}
-    .label{display:block; font-weight:600; font-size:14px; margin:0 0 6px}
-    .input, .select, .textarea{
-      width:100%;
-      padding:10px 12px;
-      border:1px solid var(--line);
-      border-radius:12px;
-      font:inherit;
-      background:#fff;
-    }
-    .textarea{min-height:110px; resize:vertical}
-    .checkRow{display:flex; gap:10px; align-items:flex-start; margin:8px 0}
-    .checkRow input{margin-top:3px}
-    .divider{height:1px; background:var(--line); margin:14px 0}
-    .ctaMini{font-size:14px; color:var(--muted); margin:8px 0 0}
-    .anchor{scroll-margin-top:90px}
-    @media (max-width:900px){
-      .twoColPage{grid-template-columns:1fr}
-    }
+    .tabs { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+    .tabBtn { border:1px solid rgba(0,0,0,.08); background:#fff; padding:10px 14px; border-radius:999px; font-weight:600; cursor:pointer; }
+    .tabBtn[aria-selected="true"] { background:#0b0f14; color:#fff; border-color:#0b0f14; }
+    .preGrid { display:grid; grid-template-columns: 1.25fr .95fr; gap:18px; align-items:start; }
+    @media (max-width: 980px){ .preGrid{ grid-template-columns:1fr; } }
+    .muted { opacity:.8; }
+    .fine2 { font-size:12.5px; line-height:1.45; opacity:.85; }
+    .sticky { position:sticky; top:14px; }
+    @media (max-width:980px){ .sticky{ position:static; } }
+    .badgeRow { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
+    .badge { font-size:12px; border:1px solid rgba(0,0,0,.08); padding:6px 10px; border-radius:999px; background:#fff; }
+    .hr { height:1px; background:rgba(0,0,0,.07); margin:12px 0; }
+    .smallCheck { display:flex; gap:10px; align-items:flex-start; margin:10px 0; }
+    .smallCheck input { margin-top:4px; }
+    .subnote { margin-top:8px; font-size:12.5px; opacity:.8; }
+    .twoColCards { display:grid; grid-template-columns: 1fr; gap:12px; }
+    .card h3 { margin-top:0; }
+    .callout { background:rgba(11,15,20,.03); border:1px solid rgba(0,0,0,.06); padding:12px 12px; border-radius:14px; }
+    .formMini { margin:0 0 10px; font-size:12.5px; opacity:.8;}
+    .hidden { display:none !important; }
   </style>
 </head>
 
@@ -52,380 +46,409 @@
     <div class="nav">
       <div class="brand">
         <a href="/" aria-label="Urban Pools Fort Wayne">
-          <img src="/assets/urban-pools-logo.png" alt="Urban Pools Fort Wayne" style="height:48px; display:block;" />
+          <img src="../assets/urban-pools-logo.png" alt="Urban Pools Fort Wayne" style="height:48px; display:block;" />
         </a>
       </div>
 
-      <button class="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-        Menu
-      </button>
+      <button class="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">Menu</button>
 
       <nav class="links" aria-label="Primary">
-        <a href="../#projects">Projects</a>
-        <a href="../#diy">DIY Pool Kits</a>
-        <a href="../#contact">Contact</a>
-        <a class="btn secondary" href="./">Pre-Season</a>
-        <a class="btn" href="../#contact">Free Consultation</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#diy">DIY Pool Kits</a>
+        <a href="/#contact">Contact</a>
+        <a class="btn secondary" href="/preseason/">Pre-Season</a>
+        <a class="btn" href="/#contact">Free Consultation</a>
+      </nav>
+
+      <nav class="mobileNav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="/#projects">Projects</a>
+        <a href="/#diy">DIY Pool Kits</a>
+        <a href="/#contact">Contact</a>
+        <a href="/preseason/">Pre-Season</a>
+        <a href="/#contact">Free Consultation</a>
       </nav>
     </div>
-
-    <nav class="mobileNav" id="mobileNav" aria-label="Mobile navigation">
-      <a href="../#projects">Projects</a>
-      <a href="../#diy">DIY Pool Kits</a>
-      <a href="../#contact">Contact</a>
-      <a href="./">Pre-Season</a>
-      <a href="../#contact">Free Consultation</a>
-    </nav>
   </div>
 </header>
 
 <main>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="wrap">
-      <div class="heroGrid" style="grid-template-columns: 1.2fr .8fr;">
+      <div class="heroGrid twoCol">
         <div>
-          <div class="kicker">Pre-Season Coordinated Order</div>
+          <div class="kicker">PRE-SEASON PRIORITY PLANNING</div>
           <h1>Vinyl Liners + Winter/Safety Covers (Fort Wayne Area)</h1>
           <p class="lead">
-            If you already own an inground pool, pre-season is the smartest time to plan:
-            better scheduling, more predictable pricing, and fewer spring surprises.
-          </p>
-          <p class="lead" style="margin-top:-6px;">
-            <strong>This is not a “buying group.”</strong><br/>
-            It’s a coordinated, early planning window that helps homeowners lock in timing before peak-season congestion.
+            If you already own an inground pool, pre-season is the smartest time to plan: better scheduling, more predictable pricing, and fewer spring surprises.
           </p>
 
-          <div class="btnRow">
-            <a class="btn" href="#overview">Get the Pre-Season Overview</a>
-            <a class="btn secondary" href="#form">Request a Quote / Check Availability</a>
+          <p class="muted" style="margin-top:10px">
+            This is not a “buying group.” It’s an early planning window to lock in next steps before peak-season congestion.
+          </p>
+
+          <div class="tabs" role="tablist" aria-label="Pre-season sections">
+            <button class="tabBtn" id="tab_overview" role="tab" aria-selected="true" aria-controls="panel_overview">Pre-Season Overview</button>
+            <button class="tabBtn" id="tab_openings" role="tab" aria-selected="false" aria-controls="panel_openings">Pool Openings</button>
+            <button class="tabBtn" id="tab_request" role="tab" aria-selected="false" aria-controls="panel_request">Request Availability</button>
+          </div>
+
+          <div class="badgeRow" aria-label="Highlights">
+            <span class="badge">Timing options</span>
+            <span class="badge">Clear next steps</span>
+            <span class="badge">Realistic lead times</span>
+            <span class="badge">No obligation</span>
           </div>
         </div>
 
-        <aside class="heroCard" aria-label="Quick summary">
+        <aside class="heroCard" aria-label="What you’ll get">
           <strong>What you’ll get</strong>
-          <p>
+          <p class="muted" style="margin-top:8px">
             Clear options, realistic timing, and a straightforward next step — without the spring scramble.
           </p>
-          <div class="divider"></div>
-          <p class="fineNote">
-            You’re not committing to anything by reading this page or submitting your info. It simply starts the process of getting clarity.
+          <div class="hr"></div>
+          <p class="muted" style="margin:0">
+            No pressure and no obligation — submit your info only if you want timing, options, or availability.
           </p>
         </aside>
       </div>
     </div>
   </section>
 
+  <!-- CONTENT -->
   <section class="section">
     <div class="wrap">
-      <div class="twoColPage">
 
-        <!-- LEFT: CONTENT -->
+      <div class="preGrid">
+
+        <!-- LEFT COLUMN -->
         <div>
 
-          <div class="card anchor" id="overview">
-            <h2>What this is</h2>
-            <p class="sub">This pre-season program is a way to plan early for common, predictable pool needs:</p>
-            <ul class="bullets">
-              <li>Vinyl liner replacement</li>
-              <li>Winter cover replacement / safety cover upgrades</li>
-              <li>Auto cover evaluation (where applicable)</li>
-              <li>Fiberglass pool repair evaluation (as-needed)</li>
-            </ul>
-            <p class="fineNote">
-              You’re not committing to anything by reading this page or submitting your info. It simply starts the process of getting clarity.
-            </p>
+          <!-- PANEL: OVERVIEW -->
+          <div id="panel_overview" role="tabpanel" aria-labelledby="tab_overview">
+            <div class="twoColCards">
+
+              <div class="card" style="background:#fff">
+                <h3>Pre-season planning (what this covers)</h3>
+                <p class="fine2" style="margin-top:-4px">
+                  One simple way to request timing, options, and next steps (Fort Wayne area).
+                </p>
+                <ul class="bullets">
+                  <li>Vinyl liner replacement</li>
+                  <li>Winter cover replacement / safety cover upgrades</li>
+                  <li>Auto cover evaluation (where applicable)</li>
+                  <li>Fiberglass step repair / resurfacing evaluation (as needed)</li>
+                  <li><strong>Plaster + fiberglass pool renovations</strong> (scope review / options)</li>
+                  <li><strong>Pool opening requests</strong> — scheduled by week (choose a 1st + 2nd choice)</li>
+                </ul>
+
+                <div class="callout" style="margin-top:10px">
+                  <div class="fine2" style="margin:0 0 6px"><strong>Opening (standard) includes:</strong></div>
+                  <div class="fine2" style="margin:0">
+                    Remove plugs/gizmos, reconnect equipment, install baskets/fittings as needed, prime &amp; start system,
+                    verify circulation, and a basic equipment check.
+                    <br><strong>Chemicals not included</strong> (available after opening if needed).
+                  </div>
+                  <div class="fine2" style="margin:8px 0 0">
+                    <strong>Optional add-on:</strong> winter cover removal — removed, folded, and placed nearby (no cleaning).
+                  </div>
+                </div>
+
+                <div class="subnote">Opening week selections are a request — we confirm availability after review.</div>
+              </div>
+
+              <div class="card" style="background:#fff">
+                <h3>What “pre-season priority planning” means</h3>
+                <div class="fine2 muted" style="margin-top:-4px">
+                  The simple version: you get better timing options before the calendar fills up.
+                </div>
+
+                <div class="hr"></div>
+
+                <div class="fine2"><strong>What it is:</strong></div>
+                <ul class="bullets">
+                  <li>Early planning across multiple local homeowners during a pre-season window</li>
+                  <li>Measuring, ordering, and installs scheduled with fewer bottlenecks</li>
+                  <li>Clear go/no-go decisions before peak demand</li>
+                </ul>
+
+                <div class="fine2" style="margin-top:6px"><strong>What it isn’t:</strong></div>
+                <ul class="bullets">
+                  <li>Not a co-op</li>
+                  <li>Not pooled money</li>
+                  <li>Not a group purchase contract</li>
+                </ul>
+
+                <div class="fine2 muted" style="margin-top:6px">
+                  You remain the customer. Your project remains your project. Coordination simply improves timing and reduces friction.
+                </div>
+              </div>
+
+              <div class="card" style="background:#fff">
+                <h3>What we do (Urban Pools)</h3>
+                <p class="fine2" style="margin-top:-4px">We support pools already in the ground:</p>
+                <ul class="bullets">
+                  <li>Vinyl liner replacement (assessment → measurement → ordering → install)</li>
+                  <li>Winter/safety covers (replacement, upgrades, adjustments)</li>
+                  <li>Service &amp; troubleshooting</li>
+                  <li>Renovations and repairs</li>
+                  <li>Fiberglass &amp; plaster renovation planning (scope + options)</li>
+                </ul>
+                <p class="fine2 muted" style="margin-top:8px">
+                  We’re local. We build, renovate, and protect pools throughout Fort Wayne and surrounding areas.
+                </p>
+              </div>
+
+              <div class="card" style="background:#fff">
+                <h3>How this works</h3>
+                <ol style="margin:10px 0 0 18px; padding:0">
+                  <li>Submit your pool info (liner / cover / opening / renovations / questions)</li>
+                  <li>We review and reply with next steps (options, measurement, timeline)</li>
+                  <li>You decide what makes sense — on your timeline</li>
+                </ol>
+                <p class="fine2 muted" style="margin-top:8px">Simple process. Clear expectations.</p>
+              </div>
+
+            </div>
           </div>
 
-          <div class="card">
-            <h2>Why pre-season matters in Indiana</h2>
-            <p class="sub">Every year we meet homeowners who wish they had addressed a liner or cover one season earlier.</p>
-            <p style="margin:10px 0 0">What could have been planned becomes rushed when:</p>
-            <ul class="bullets">
-              <li>Materials fail unexpectedly</li>
-              <li>Spring schedules tighten</li>
-              <li>Weather compresses timelines</li>
-              <li>Damage begins to affect the pool structure, coping, or track systems</li>
-            </ul>
-            <p class="fineNote">Pre-season planning gives you options.</p>
+          <!-- PANEL: OPENINGS -->
+          <div id="panel_openings" class="hidden" role="tabpanel" aria-labelledby="tab_openings">
+            <div class="card" style="background:#fff">
+              <h3>Pool openings (requests)</h3>
+              <p class="fine2" style="margin-top:-4px">
+                Want to get ahead of the rush? Request an opening window now.
+              </p>
+              <ul class="bullets">
+                <li>Openings are scheduled by week (you choose a first and second choice)</li>
+                <li>We confirm availability after we review your request</li>
+                <li><strong>First opening with us includes a complimentary in-depth opening inspection</strong></li>
+              </ul>
+
+              <div class="callout" style="margin-top:10px">
+                <div class="fine2" style="margin:0 0 6px"><strong>Standard opening includes:</strong></div>
+                <div class="fine2" style="margin:0">
+                  Remove plugs/gizmos, reconnect equipment, install baskets/fittings as needed, prime &amp; start system,
+                  verify circulation, and a basic equipment check.
+                  <br><strong>Chemicals not included</strong> (available after opening if needed).
+                </div>
+                <div class="fine2" style="margin:8px 0 0">
+                  <strong>Optional add-on:</strong> winter cover removal — removed, folded, and placed nearby (no cleaning).
+                </div>
+              </div>
+
+              <p class="fine2 muted" style="margin-top:10px">
+                Use the form on the right to request your preferred week — it’s a request, not a confirmation.
+              </p>
+            </div>
           </div>
 
-          <div class="card">
-            <h2>Signs a vinyl liner may be nearing end-of-life</h2>
-            <p class="sub">Common early indicators:</p>
-            <ul class="bullets">
-              <li>Fading, brittleness, or “chalky” feel</li>
-              <li>Wrinkles that don’t relax back out</li>
-              <li>Bead slipping, separation, or stretching at corners/steps</li>
-              <li>Small tears near fittings, stairs, or returns</li>
-              <li>Persistent water loss with no clear plumbing leak</li>
-              <li>Pattern distortion, thinning, or visible wear lines</li>
-            </ul>
-            <p class="fineNote">
-              A liner can look “fine” until it isn’t — and failures tend to happen on the calendar’s worst day.
-            </p>
-          </div>
-
-          <div class="card">
-            <h2>Signs your winter cover may be due</h2>
-            <ul class="bullets">
-              <li>Torn straps, fraying webbing, or broken springs</li>
-              <li>Cover bagging/sagging or poor tension</li>
-              <li>Water pooling where it shouldn’t</li>
-              <li>Anchors pulling or deck hardware issues</li>
-              <li>Safety concerns (pets/kids) or degraded fabric strength</li>
-            </ul>
-            <p class="fineNote">Covers don’t just “look older” — they become less predictable.</p>
-          </div>
-
-          <div class="card">
-            <h2>What “coordinated purchasing” means (and what it isn’t)</h2>
-
-            <p class="sub" style="margin-top:0"><strong>What it is:</strong></p>
-            <ul class="bullets">
-              <li>We align planning across multiple local homeowners during a pre-season window</li>
-              <li>We schedule measuring, ordering, and installs with fewer bottlenecks</li>
-              <li>We help you get ahead of production and peak calendar demand</li>
-            </ul>
-
-            <p class="sub" style="margin-top:12px"><strong>What it isn’t:</strong></p>
-            <ul class="bullets">
-              <li>Not a co-op</li>
-              <li>Not pooled money</li>
-              <li>Not a group purchase contract</li>
-              <li>Not “we’ll call you if we find enough people”</li>
-            </ul>
-
-            <p class="fineNote">
-              You remain the customer. Your project remains your project. Coordination simply improves timing and reduces friction.
-            </p>
-          </div>
-
-          <div class="card">
-            <h2>What we do (Urban Pools)</h2>
-            <p class="sub">We support pools already in the ground:</p>
-            <ul class="bullets">
-              <li>Vinyl liner replacement (assessment → measurement → ordering → install)</li>
-              <li>Winter/safety covers (replacement, upgrades, adjustments)</li>
-              <li>Service & troubleshooting</li>
-              <li>Renovations and repairs</li>
-              <li>Fiberglass pool repairs and resurfacing evaluation (as needed)</li>
-            </ul>
-            <p class="fineNote">We’re local. We build, renovate, and protect pools throughout Fort Wayne and surrounding areas.</p>
-          </div>
-
-          <div class="card">
-            <h2>How this works</h2>
-            <ol style="margin:10px 0 0; padding-left:18px">
-              <li style="margin-bottom:6px">Request the overview / submit your pool info</li>
-              <li style="margin-bottom:6px">We review and follow up with next steps (measurement, options, timeline)</li>
-              <li>You decide what makes sense — on your timeline</li>
-            </ol>
-            <p class="fineNote">No pressure. Just clarity and a realistic path forward.</p>
-          </div>
-
-        </div>
-
-        <!-- RIGHT: FORM + FAQ + CTA -->
-        <div>
-
-          <div class="card anchor" id="form">
-            <h2>Get the Pre-Season Overview + Availability</h2>
-            <p class="sub">Fill this out and we’ll follow up with next steps.</p>
-
-            <!-- NOTE: This is a placeholder form (no backend). Replace action="" when you connect a form tool. -->
-            <form action="https://formspree.io/f/mwvvewyq" method="POST">
-
-  <div class="field">
-    <label class="label" for="name">Name</label>
-    <input
-      class="input"
-      id="name"
-      name="name"
-      type="text"
-      placeholder="Your name"
-      autocomplete="name"
-      required
-    />
-  </div>
-
-  <div class="field">
-    <label class="label" for="email">Email</label>
-    <input
-      class="input"
-      id="email"
-      name="email"
-      type="email"
-      placeholder="Email address"
-      autocomplete="email"
-      required
-    />
-  </div>
-
-  <div class="field">
-    <label class="label" for="phone">Phone (optional)</label>
-    <input
-      class="input"
-      id="phone"
-      name="phone"
-      type="tel"
-      placeholder="Phone number"
-      autocomplete="tel"
-    />
-  </div>
-
-  <div class="field">
-    <label class="label" for="preferred_contact">Preferred contact method</label>
-    <select
-      class="select"
-      id="preferred_contact"
-      name="preferred_contact"
-      required
-    >
-      <option value="">Select one</option>
-      <option value="Email">Email</option>
-      <option value="Text">Text</option>
-      <option value="Either">Either is fine</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label class="label" for="area">Address / Area (optional)</label>
-    <input
-      class="input"
-      id="area"
-      name="area"
-      type="text"
-      placeholder="Street or City / neighborhood is fine"
-      autocomplete="street-address"
-    />
-  </div>
-
-  <div class="field">
-    <label class="label" for="pool_type">Pool type</label>
-    <select
-      class="select"
-      id="pool_type"
-      name="pool_type"
-      required
-    >
-      <option value="">Select pool type</option>
-      <option value="Vinyl">Vinyl</option>
-      <option value="Fiberglass">Fiberglass</option>
-      <option value="Concrete">Concrete</option>
-      <option value="Not sure">Not sure</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <div class="label">What are you looking at? (check all that apply)</div>
-
-    <label class="checkRow">
-      <input type="checkbox" name="interests" value="Vinyl liner replacement" />
-      <span>Vinyl liner replacement</span>
-    </label>
-
-    <label class="checkRow">
-      <input type="checkbox" name="interests" value="Winter / safety cover replacement" />
-      <span>Winter cover / safety cover replacement</span>
-    </label>
-
-    <label class="checkRow">
-      <input type="checkbox" name="interests" value="Auto cover evaluation" />
-      <span>Auto cover evaluation</span>
-    </label>
-
-    <label class="checkRow">
-      <input type="checkbox" name="interests" value="Fiberglass repair / resurfacing questions" />
-      <span>Fiberglass repair / resurfacing questions</span>
-    </label>
-
-    <label class="checkRow">
-      <input type="checkbox" name="interests" value="Not sure — guidance" />
-      <span>Not sure — just want guidance</span>
-    </label>
-  </div>
-
-  <div class="field">
-    <label class="label" for="message">Anything you’re noticing? (optional)</label>
-    <textarea
-      class="textarea"
-      id="message"
-      name="message"
-      placeholder="Wrinkles, fading, water loss, torn straps, sagging cover, etc."
-    ></textarea>
-  </div>
-
-  <!-- Formspree metadata -->
-  <input type="hidden" name="_subject" value="Urban Pools – Pre-Season Lead" />
-  <input type="hidden" name="source" value="Preseason Page Form" />
-
-  <button class="btn" type="submit">Submit</button>
-  <p class="ctaMini">We respect your privacy. No mailing lists. No spam.</p>
-
-</form>
-
-
-          </div>
-
-          <div class="card">
-            <h2>Short FAQ</h2>
-
-            <p style="margin:0 0 10px">
-              <strong>Do I have to commit to anything?</strong><br/>
-              <span style="color:var(--muted)">No. This is information-first. If you want help, we’ll outline options and timing.</span>
-            </p>
-
-            <p style="margin:0 0 10px">
-              <strong>Is this a “buying group” or a pooled order?</strong><br/>
-              <span style="color:var(--muted)">No. It’s a coordinated planning window to help homeowners get ahead of the seasonal rush.</span>
-            </p>
-
-            <p style="margin:0 0 10px">
-              <strong>Do you only do vinyl liners?</strong><br/>
-              <span style="color:var(--muted)">No. Vinyl is common here, but we also work with covers, service, renovations, and fiberglass pool repairs.</span>
-            </p>
-
-            <p style="margin:0">
-              <strong>What if I’m not sure what I need?</strong><br/>
-              <span style="color:var(--muted)">That’s normal. Submit the form and we’ll help you sort it out quickly.</span>
-            </p>
-          </div>
-
-          <div class="card">
-            <h2>Prefer to talk directly?</h2>
-            <p class="sub">Call/text: <strong>260-414-5691</strong></p>
-            <p class="fineNote" style="margin-top:8px">
-              Urban Pools | Fort Wayne, Indiana<br/>
-              <span style="color:var(--muted)">/preseason</span>
-            </p>
-            <div class="btnRow" style="margin-top:10px">
-              <a class="btn" href="#form">Request Info</a>
-              <a class="btn secondary" href="../">Back to Home</a>
+          <!-- PANEL: REQUEST -->
+          <div id="panel_request" class="hidden" role="tabpanel" aria-labelledby="tab_request">
+            <div class="card" style="background:#fff">
+              <h3>Request availability</h3>
+              <p class="fine2" style="margin-top:-4px">
+                Fill out the form and we’ll reply with next steps — timing, options, and what we need from you.
+              </p>
+              <p class="fine2 muted">Tip: include photos if you have them (liner, coping, cover, equipment pad).</p>
             </div>
           </div>
 
         </div>
 
+        <!-- RIGHT COLUMN (FORM) -->
+        <aside class="sticky">
+          <div class="card" style="background:#fff">
+            <h3 style="margin-bottom:6px">Request availability</h3>
+            <p class="formMini">Pre-season planning + opening requests — we’ll reply with next steps.</p>
+
+            <form class="contactForm" action="https://formspree.io/f/mwvvewyq" method="POST">
+              <div class="field">
+                <label class="label" for="p_name">Name</label>
+                <input class="input" id="p_name" name="name" type="text" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label class="label" for="p_email">Email</label>
+                <input class="input" id="p_email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="field">
+                <label class="label" for="p_phone">Phone (optional)</label>
+                <input class="input" id="p_phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+
+              <div class="field">
+                <label class="label" for="p_pref">Preferred contact method</label>
+                <select class="select" id="p_pref" name="preferred_contact" required>
+                  <option value="">Select one</option>
+                  <option value="Email">Email</option>
+                  <option value="Text">Text</option>
+                  <option value="Either">Either is fine</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label class="label" for="p_area">Address / Area (optional)</label>
+                <input class="input" id="p_area" name="area" type="text" placeholder="Street or City / neighborhood is fine" />
+              </div>
+
+              <div class="field">
+                <label class="label" for="p_pooltype">Pool type</label>
+                <select class="select" id="p_pooltype" name="pool_type" required>
+                  <option value="">Select pool type</option>
+                  <option value="Vinyl">Vinyl</option>
+                  <option value="Fiberglass">Fiberglass</option>
+                  <option value="Plaster / Concrete">Plaster / Concrete</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Not sure">Not sure</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label class="label">What are you looking at? (check all that apply)</label>
+
+                <div class="smallCheck">
+                  <input type="checkbox" id="need_opening" name="interests" value="Pool opening request (requested, not confirmed)">
+                  <label for="need_opening" class="fine2" style="margin:0">
+                    <strong>Pool opening request</strong> <span class="muted">(requested, not confirmed)</span><br>
+                    <span class="fine2 muted">Standard start-up + basic equipment check. Chemicals not included. Optional add-on: winter cover removal (removed, folded, placed nearby — no cleaning).</span>
+                  </label>
+                </div>
+
+                <div class="smallCheck">
+                  <input type="checkbox" id="need_liner" name="interests" value="Vinyl liner replacement">
+                  <label for="need_liner" class="fine2" style="margin:0"><strong>Vinyl liner replacement</strong></label>
+                </div>
+
+                <div class="smallCheck">
+                  <input type="checkbox" id="need_cover" name="interests" value="Winter cover / safety cover replacement">
+                  <label for="need_cover" class="fine2" style="margin:0"><strong>Winter cover / safety cover replacement</strong></label>
+                </div>
+
+                <div class="smallCheck">
+                  <input type="checkbox" id="need_autocover" name="interests" value="Auto cover evaluation">
+                  <label for="need_autocover" class="fine2" style="margin:0"><strong>Auto cover evaluation</strong></label>
+                </div>
+
+                <div class="smallCheck">
+                  <input type="checkbox" id="need_steps" name="interests" value="Fiberglass step repair / resurfacing questions">
+                  <label for="need_steps" class="fine2" style="margin:0"><strong>Fiberglass step repair / resurfacing questions</strong></label>
+                </div>
+
+                <div class="smallCheck">
+                  <input type="checkbox" id="need_reno" name="interests" value="Plaster / fiberglass pool renovations (planning)">
+                  <label for="need_reno" class="fine2" style="margin:0"><strong>Plaster / fiberglass pool renovations</strong> <span class="muted">(planning)</span></label>
+                </div>
+
+                <div class="smallCheck">
+                  <input type="checkbox" id="need_unsure" name="interests" value="Not sure — just want guidance">
+                  <label for="need_unsure" class="fine2" style="margin:0"><strong>Not sure — just want guidance</strong></label>
+                </div>
+              </div>
+
+              <!-- opening weeks show only if opening is checked -->
+              <div id="opening_fields" class="hidden">
+                <div class="hr"></div>
+                <div class="fine2" style="margin:0 0 8px">
+                  <strong>Opening week selections</strong> (request only — we confirm availability).
+                </div>
+
+                <div class="field">
+                  <label class="label" for="p_open_week1">Preferred opening week (1st choice)</label>
+                  <input class="input" id="p_open_week1" name="preferred_opening_week_1" type="week" />
+                </div>
+
+                <div class="field">
+                  <label class="label" for="p_open_week2">Preferred opening week (2nd choice)</label>
+                  <input class="input" id="p_open_week2" name="preferred_opening_week_2" type="week" />
+                </div>
+
+                <div class="smallCheck" style="margin-top:8px">
+                  <input type="checkbox" id="add_cover_remove" name="add_ons" value="Optional add-on: winter cover removal (remove, fold, place nearby — no cleaning)">
+                  <label for="add_cover_remove" class="fine2" style="margin:0">
+                    <strong>Optional add-on:</strong> winter cover removal (remove, fold, place nearby — no cleaning)
+                  </label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="p_notes">Anything you’re noticing? (optional)</label>
+                <textarea class="textarea" id="p_notes" name="message" rows="4" placeholder="Wrinkles, fading, water loss, torn straps, sagging cover, equipment issues, renovation goals, timeline, etc."></textarea>
+              </div>
+
+              <!-- Metadata -->
+              <input type="hidden" name="_subject" value="Urban Pools – Pre-Season Lead" />
+              <input type="hidden" name="source" value="Preseason Page" />
+              <input type="hidden" name="_next" value="/thanks.html" />
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+              <button class="btn" type="submit">Submit</button>
+              <p class="ctaMini">We respect your privacy. No mailing lists. No spam.</p>
+            </form>
+          </div>
+
+          <div class="card" style="background:#fff; margin-top:14px">
+            <h3>Short FAQ</h3>
+
+            <div class="fine2"><strong>Do I have to commit to anything?</strong></div>
+            <div class="fine2 muted" style="margin-top:4px">No. This is information-first. If you want help, we’ll outline options and timing.</div>
+
+            <div class="hr"></div>
+
+            <div class="fine2"><strong>Is this a “buying group” or pooled order?</strong></div>
+            <div class="fine2 muted" style="margin-top:4px">No. It’s an early planning window to help homeowners get ahead of the seasonal rush.</div>
+
+            <div class="hr"></div>
+
+            <div class="fine2"><strong>How do opening requests work?</strong></div>
+            <div class="fine2 muted" style="margin-top:4px">Choose a first and second choice week. We reply to confirm (or suggest the closest available week).</div>
+
+            <div class="hr"></div>
+
+            <div class="fine2"><strong>What if I’m not sure what I need?</strong></div>
+            <div class="fine2 muted" style="margin-top:4px">That’s normal. Submit the form and we’ll help you sort it out quickly.</div>
+          </div>
+
+          <div class="card" style="background:#fff; margin-top:14px">
+            <h3>Prefer to talk directly?</h3>
+            <div class="fine2"><strong>Call/text:</strong> 260-414-5691</div>
+            <div class="fine2 muted" style="margin-top:6px">Urban Pools • Fort Wayne, Indiana</div>
+
+            <div class="btnRow" style="margin-top:12px">
+              <a class="btn" href="#top" id="btn_request">Request Info</a>
+              <a class="btn secondary" href="/">Back to Home</a>
+            </div>
+          </div>
+        </aside>
+
       </div>
     </div>
   </section>
-
 </main>
 
 <footer>
-  <div class="wrap">
-    © <span id="y"></span> Urban Pools • Fort Wayne, Indiana
+  <div class="wrap" style="padding:0">
+    <div class="footerGrid">
+      <div>
+        <strong style="color:var(--text)">Urban Pools Fort Wayne</strong><br/>
+        <span class="fine">Pre-Season Priority Planning • Liners • Covers • Openings • Renovations</span>
+      </div>
+      <div style="text-align:right">
+        <span class="fine">© <span id="y"></span> Urban Pools</span>
+      </div>
+    </div>
   </div>
 </footer>
 
 <script>
+  // year
   document.getElementById("y").textContent = new Date().getFullYear();
 
+  // mobile menu
   const btn = document.querySelector(".menuBtn");
   const mobileNav = document.getElementById("mobileNav");
-
   if (btn && mobileNav) {
     btn.addEventListener("click", () => {
       const open = mobileNav.style.display === "block";
@@ -434,10 +457,49 @@
       btn.textContent = open ? "Menu" : "Close";
     });
   }
-</script>
 
+  // tabs
+  const tabs = [
+    { tab: "tab_overview", panel: "panel_overview" },
+    { tab: "tab_openings", panel: "panel_openings" },
+    { tab: "tab_request", panel: "panel_request" }
+  ];
+
+  function setTab(activeTabId) {
+    tabs.forEach(({tab, panel}) => {
+      const t = document.getElementById(tab);
+      const p = document.getElementById(panel);
+      const isActive = tab === activeTabId;
+      if (t) t.setAttribute("aria-selected", isActive ? "true" : "false");
+      if (p) p.classList.toggle("hidden", !isActive);
+    });
+  }
+
+  tabs.forEach(({tab}) => {
+    const t = document.getElementById(tab);
+    if (t) t.addEventListener("click", () => setTab(tab));
+  });
+
+  // opening fields toggle
+  const openingCheckbox = document.getElementById("need_opening");
+  const openingFields = document.getElementById("opening_fields");
+  function syncOpeningFields() {
+    if (!openingCheckbox || !openingFields) return;
+    openingFields.classList.toggle("hidden", !openingCheckbox.checked);
+  }
+  if (openingCheckbox) {
+    openingCheckbox.addEventListener("change", syncOpeningFields);
+    syncOpeningFields();
+  }
+
+  // "Request Info" button: open the request tab on click
+  const reqBtn = document.getElementById("btn_request");
+  if (reqBtn) {
+    reqBtn.addEventListener("click", () => {
+      setTab("tab_request");
+    });
+  }
+</script>
 
 </body>
 </html>
-
-
