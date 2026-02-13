@@ -4,12 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Urban Pools Fort Wayne</title>
-
   <meta name="description" content="Custom-built vinyl and hybrid in-ground pools, vinyl liner replacement, remodeling, DIY pool kits, and consulting services in Fort Wayne, Indiana." />
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/site.css?v=3" />
 </head>
 
@@ -19,37 +14,85 @@
   <div class="wrap">
     <div class="nav">
       <div class="brand">
-  <a href="/" aria-label="Urban Pools Fort Wayne">
-    <img
-      src="assets/urban-pools-logo.png"
-      alt="Urban Pools Fort Wayne"
-      style="height: 48px; display:block;"
-    />
-  </a>
-</div>
+        <a href="/" aria-label="Urban Pools Fort Wayne">
+          <img
+            src="assets/urban-pools-logo.png"
+            alt="Urban Pools Fort Wayne"
+            style="height: 48px; display:block;"
+          />
+        </a>
+      </div>
 
-<button class="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-  Menu
-</button>
+      <button class="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        Menu
+      </button>
 
-<nav class="links" aria-label="Primary">
-  <a href="#projects">Projects</a>
-  <a href="#diy">DIY Pool Kits</a>
-  <a href="#contact">Contact</a>
-  <a class="btn secondary" href="preseason/">Pre-Season</a>
-  <a class="btn" href="#contact">Free Consultation</a>
-</nav>
+      <nav class="links" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#diy">DIY Pool Kits</a>
+        <a href="#contact">Contact</a>
+        <a class="btn secondary" href="preseason/">Pre-Season</a>
+        <a class="btn" href="#contact">Free Consultation</a>
+      </nav>
+    </div>
 
-<nav class="mobileNav" id="mobileNav" aria-label="Mobile navigation">
-  <a href="#projects">Projects</a>
-  <a href="#diy">DIY Pool Kits</a>
-  <a href="#contact">Contact</a>
-  <a href="preseason/">Pre-Season</a>
-  <a href="#contact">Free Consultation</a>
-</nav>
-
+    <!-- Mobile nav (JS expects #mobileNav) -->
+    <div id="mobileNav" class="mobileNav" aria-label="Mobile">
+      <a href="#projects">Projects</a>
+      <a href="#diy">DIY Pool Kits</a>
+      <a href="#contact">Contact</a>
+      <a href="preseason/">Pre-Season</a>
+    </div>
   </div>
 </header>
+
+<!-- TEMP: SPRING OPENINGS BAR (delete this whole section when done) -->
+<section class="topBar" id="openingsBar" aria-label="Spring openings signup">
+  <div class="wrap">
+    <div class="topBarRow">
+      <div class="topBarLeft">
+        <div class="topBarKicker">SPRING OPENINGS • FORT WAYNE AREA</div>
+        <div class="topBarSub">We open pools. Request a week — we’ll reach out with the necessary info and next steps.</div>
+      </div>
+
+      <form class="topBarForm" action="https://formspree.io/f/mwvvewyq" method="POST">
+        <!-- Metadata -->
+        <input type="hidden" name="_subject" value="Urban Pools – Opening Week Request" />
+        <input type="hidden" name="source" value="Homepage Top Bar – Openings" />
+        <input type="hidden" name="service" value="Pool opening / spring startup" />
+        <input type="hidden" name="_next" value="/thanks.html" />
+        <!-- Spam honeypot -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <label class="srOnly" for="ob_name">Name</label>
+        <input class="topInput" id="ob_name" name="name" type="text" placeholder="Name" autocomplete="name" required />
+
+        <label class="srOnly" for="ob_email">Email</label>
+        <input class="topInput" id="ob_email" name="email" type="email" placeholder="Email" autocomplete="email" required />
+
+        <label class="srOnly" for="ob_week">Requested week</label>
+        <select class="topSelect" id="ob_week" name="requested_week" required>
+          <option value="">Requested week</option>
+          <option value="Week of Mar 18">Week of Mar 18</option>
+          <option value="Week of Mar 25">Week of Mar 25</option>
+          <option value="Week of Apr 1">Week of Apr 1</option>
+          <option value="Week of Apr 8">Week of Apr 8</option>
+          <option value="Week of Apr 15">Week of Apr 15</option>
+          <option value="Week of Apr 22">Week of Apr 22</option>
+          <option value="Week of Apr 29">Week of Apr 29</option>
+          <option value="Week of May 6">Week of May 6</option>
+          <option value="Week of May 13">Week of May 13</option>
+          <option value="Week of May 20">Week of May 20</option>
+          <option value="Week of May 27">Week of May 27</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+
+        <button class="topBtn" type="submit">Request</button>
+        <a class="topLink" href="preseason/">Details</a>
+      </form>
+    </div>
+  </div>
+</section>
 
 <main>
   <!-- HERO -->
@@ -78,7 +121,7 @@
           </div>
 
           <p class="note">
-            Built for pool owners in the Fort Wayne area — liners, covers, remodeling, and service.
+            Built for existing pool owners in the Fort Wayne area — liners, covers, remodeling, and service.
           </p>
         </div>
 
@@ -163,7 +206,7 @@
           <h2>DIY Inground Pool Kits</h2>
           <p class="sub">Delivered straight to your doorstep — with expert phone support.</p>
         </div>
-        <a class="btn secondary" href="https://urbanpoolsfw.com/diy">DIY Pool Kits</a>
+        <a class="btn secondary" href="https://urbanpoolsfw.com/diy-pool-kits">DIY Pool Kits</a>
       </div>
 
       <div class="grid3">
@@ -214,88 +257,82 @@
           <h3>Request a quote / consultation</h3>
           <p class="fine" style="margin-top:-2px">Prefer email replies? Use the form. Prefer fast? Text us.</p>
 
-          <!--
-            FORM SETUP:
-            1) Create a Formspree form (free) and replace the action URL below.
-               Example: https://formspree.io/f/abcdwxyz
-            2) Optional: set a redirect/thank-you page in Formspree settings.
-          --> I did.
-	<form class="contactForm" action="https://formspree.io/f/mwvvewyq" method="POST">
+          <form class="contactForm" action="https://formspree.io/f/mwvvewyq" method="POST">
 
-  <div class="fieldRow">
-    <div class="field">
-      <label class="label" for="c_name">Name</label>
-      <input class="input" id="c_name" name="name" type="text" autocomplete="name" required />
-    </div>
+            <div class="fieldRow">
+              <div class="field">
+                <label class="label" for="c_name">Name</label>
+                <input class="input" id="c_name" name="name" type="text" autocomplete="name" required />
+              </div>
 
-    <div class="field">
-      <label class="label" for="c_email">Email</label>
-      <input class="input" id="c_email" name="email" type="email" autocomplete="email" required />
-    </div>
-  </div>
+              <div class="field">
+                <label class="label" for="c_email">Email</label>
+                <input class="input" id="c_email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
 
-  <div class="fieldRow">
-    <div class="field">
-      <label class="label" for="c_phone">Phone (optional)</label>
-      <input class="input" id="c_phone" name="phone" type="tel" autocomplete="tel" />
-    </div>
+            <div class="fieldRow">
+              <div class="field">
+                <label class="label" for="c_phone">Phone (optional)</label>
+                <input class="input" id="c_phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
 
-    <div class="field">
-      <label class="label" for="c_pref">Preferred contact method</label>
-      <select class="select" id="c_pref" name="preferred_contact" required>
-        <option value="">Select one</option>
-        <option value="Email">Email</option>
-        <option value="Text">Text</option>
-        <option value="Either">Either is fine</option>
-      </select>
-    </div>
-  </div>
+              <div class="field">
+                <label class="label" for="c_pref">Preferred contact method</label>
+                <select class="select" id="c_pref" name="preferred_contact" required>
+                  <option value="">Select one</option>
+                  <option value="Email">Email</option>
+                  <option value="Text">Text</option>
+                  <option value="Either">Either is fine</option>
+                </select>
+              </div>
+            </div>
 
-  <div class="fieldRow">
-    <div class="field">
-      <label class="label" for="c_area">Address / Area (optional)</label>
-      <input class="input" id="c_area" name="area" type="text" placeholder="Neighborhood / City is fine" />
-    </div>
+            <div class="fieldRow">
+              <div class="field">
+                <label class="label" for="c_area">Address / Area (optional)</label>
+                <input class="input" id="c_area" name="area" type="text" placeholder="Neighborhood / City is fine" />
+              </div>
 
-    <div class="field">
-      <label class="label" for="c_service">Service</label>
-      <select class="select" id="c_service" name="service" required>
-        <option value="">What can we help with?</option>
-        <option value="Vinyl liner replacement">Vinyl liner replacement</option>
-        <option value="New build / remodeling">New build / remodeling</option>
-        <option value="Service / troubleshooting">Service / troubleshooting</option>
-        <option value="DIY in-ground kit">DIY in-ground kit</option>
-        <option value="Consulting">Consulting</option>
-        <option value="Not sure yet">Not sure yet</option>
-      </select>
-    </div>
-  </div>
+              <div class="field">
+                <label class="label" for="c_service">Service</label>
+                <select class="select" id="c_service" name="service" required>
+                  <option value="">What can we help with?</option>
+                  <option value="Vinyl liner replacement">Vinyl liner replacement</option>
+                  <option value="New build / remodeling">New build / remodeling</option>
+                  <option value="Service / troubleshooting">Service / troubleshooting</option>
+                  <option value="DIY in-ground kit">DIY in-ground kit</option>
+                  <option value="Consulting">Consulting</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+            </div>
 
-  <div class="field">
-    <label class="label" for="c_notes">Message (optional)</label>
-    <textarea
-      class="textarea"
-      id="c_notes"
-      name="message"
-      rows="4"
-      placeholder="What’s going on? Timeline, symptoms, measurements—anything helps."
-    ></textarea>
-  </div>
+            <div class="field">
+              <label class="label" for="c_notes">Message (optional)</label>
+              <textarea
+                class="textarea"
+                id="c_notes"
+                name="message"
+                rows="4"
+                placeholder="What’s going on? Timeline, symptoms, measurements—anything helps."
+              ></textarea>
+            </div>
 
-  <!-- Metadata -->
-  <input type="hidden" name="_subject" value="Urban Pools – Website Lead" />
-  <input type="hidden" name="source" value="Homepage Contact Form" />
+            <!-- Metadata -->
+            <input type="hidden" name="_subject" value="Urban Pools – Website Lead" />
+            <input type="hidden" name="source" value="Homepage Contact Form" />
 
-  <!-- Redirect after submit (create /thanks.html or remove this line) -->
-  <input type="hidden" name="_next" value="/thanks.html" />
+            <!-- Redirect after submit (create /thanks.html or remove this line) -->
+            <input type="hidden" name="_next" value="/thanks.html" />
 
-  <!-- Spam honeypot -->
-  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <!-- Spam honeypot -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-  <button class="btn" type="submit">Submit</button>
-  <p class="ctaMini">We respect your privacy. No mailing lists. No spam.</p>
+            <button class="btn" type="submit">Submit</button>
+            <p class="ctaMini">We respect your privacy. No mailing lists. No spam.</p>
 
-</form>
+          </form>
 
         </div>
 
@@ -359,4 +396,3 @@
 
 </body>
 </html>
-

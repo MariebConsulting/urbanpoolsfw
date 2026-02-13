@@ -1,0 +1,70 @@
+export default {
+  async fetch(req, env) {
+    // Basic CORS
+    const origin = req.headers.get("Origin") || "*";
+    const cors = {
+      "Access-Control-Allow-Origin": origin,
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Max-Age": "86400",
+    };
+    if (req.method === "OPTIONS") return new Response("", { headers: cors });
+
+    if (req.method !== "POST") {
+      return new Response(JSON.stringify({ error: "POST only" }), {
+        status: 405,
+        headers: { ...cors, "Content-Type": "application/json" },
+      });
+    }
+
+    // Very light rate limit by IP (good enough for v1)
+    const ip =
+      req.headers.get("CF-Connecting-IP") ||
+      req.headers.get("X-Forwarded-For") ||
+      "unknown";
+    // You can upgrade this later using KV/Durable Objects. For now: just a simple guardrail.
+    // (No persistent storage in this v1 snippet.)
+
+    let body;
+    try {
+      body = await req.json();
+    } catch {
+      return new Response(JSON.stringify({ error: "Invalid JSON" }), {
+        status: 400,
+        headers: { ...cors, "Content-Type": "application/json" },
+      });
+    }
+
+    const { messages = [] } = body;
+
+    const system = {
+      role: "system",
+      content:
+        "You are Urban Pools Fort Wayne's homeowner pool assistant. " +
+        "Be practical, concise, and safety-first. Ask clarifying questions when needed (pool type, gallons, sanitizer, test readings). " +
+        "Do NOT give exact chemical dosing without pool volume + current readings. " +
+        "If gas/electrical/structural or code-related: recommend a licensed pro and note uncertainty. " +
+        "Prefer clear step-by-step troubleshooting. End with a short next step.",
+    };
+
+    // Call Perplexity
+    const r = await fetch("https://api.perplexity.ai/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${env.PERPLEXITY_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "sonar", // cheaper default; change to "sonar-pro" for harder questions
+        temperature: 0.2,
+        messages: [system, ...messages].slice(-12), // keep it tight; cheap + fast
+      }),
+    });
+
+    const data = await r.json();
+    return new Response(JSON.stringify(data), {
+      status: r.status,
+      headers: { ...cors, "Content-Type": "application/json" },
+    });
+  },
+};
