@@ -16,18 +16,13 @@
 
   <!-- Small page-specific tweaks (safe even if site.css changes) -->
   <style>
-    .tabs { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
-    .tabBtn { border:1px solid rgba(0,0,0,.08); background:#fff; padding:10px 14px; border-radius:999px; font-weight:600; cursor:pointer; }
-    .tabBtn[aria-selected="true"] { background:#0b0f14; color:#fff; border-color:#0b0f14; }
-    .preGrid { display:grid; grid-template-columns: 1.25fr .95fr; gap:18px; align-items:start; }
+.preGrid { display:grid; grid-template-columns: 1.25fr .95fr; gap:18px; align-items:start; }
     @media (max-width: 980px){ .preGrid{ grid-template-columns:1fr; } }
     .muted { opacity:.8; }
     .fine2 { font-size:12.5px; line-height:1.45; opacity:.85; }
     .sticky { position:sticky; top:14px; }
     @media (max-width:980px){ .sticky{ position:static; } }
-    .badgeRow { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
-    .badge { font-size:12px; border:1px solid rgba(0,0,0,.08); padding:6px 10px; border-radius:999px; background:#fff; }
-    .hr { height:1px; background:rgba(0,0,0,.07); margin:12px 0; }
+.hr { height:1px; background:rgba(0,0,0,.07); margin:12px 0; }
     .smallCheck { display:flex; gap:10px; align-items:flex-start; margin:10px 0; }
     .smallCheck input { margin-top:4px; }
     .subnote { margin-top:8px; font-size:12.5px; opacity:.8; }
@@ -78,29 +73,23 @@
     <div class="wrap">
       <div class="heroGrid twoCol">
         <div>
-          <div class="kicker">PRE-SEASON PRIORITY PLANNING</div>
-          <h1>Vinyl Liners + Winter/Safety Covers (Fort Wayne Area)</h1>
+          <div class="kicker">GET SCHEDULED BEFORE THE RUSH</div>
+          <h1>Pre-Season Priority Planning - Fort Wayne Area</h1>
           <p class="lead">
             If you already own an inground pool, pre-season is the smartest time to plan: better scheduling, more predictable pricing, and fewer spring surprises.
           </p>
 
           <p class="muted" style="margin-top:10px">
-            This is not a “buying group.” It’s an early planning window to lock in next steps before peak-season congestion.
+            This is an early planning window to lock in next steps before peak-season congestion.
           </p>
 
-          <div class="tabs" role="tablist" aria-label="Pre-season sections">
-            <button class="tabBtn" id="tab_overview" role="tab" aria-selected="true" aria-controls="panel_overview">Pre-Season Overview</button>
-            <button class="tabBtn" id="tab_openings" role="tab" aria-selected="false" aria-controls="panel_openings">Pool Openings</button>
-            <button class="tabBtn" id="tab_request" role="tab" aria-selected="false" aria-controls="panel_request">Request Availability</button>
+          <!-- Section pills (restore) -->
+          <div class="btnRow" style="margin-top:16px">
+            <a class="btn" href="#overview">Pre-Season Overview</a>
+            <a class="btn secondary" href="#openings_info">Pool Openings</a>
+            <a class="btn secondary" href="#request">Request Availability</a>
           </div>
-
-          <div class="badgeRow" aria-label="Highlights">
-            <span class="badge">Timing options</span>
-            <span class="badge">Clear next steps</span>
-            <span class="badge">Realistic lead times</span>
-            <span class="badge">No obligation</span>
-          </div>
-        </div>
+</div>
 
         <aside class="heroCard" aria-label="What you’ll get">
           <strong>What you’ll get</strong>
@@ -129,7 +118,7 @@
           <div id="panel_overview" role="tabpanel" aria-labelledby="tab_overview">
             <div class="twoColCards">
 
-              <div class="card" style="background:#fff">
+              <div class="card" id="overview" style="background:#fff">
                 <h3>Pre-season planning (what this covers)</h3>
                 <p class="fine2" style="margin-top:-4px">
                   One simple way to request timing, options, and next steps (Fort Wayne area).
@@ -143,12 +132,12 @@
                   <li><strong>Pool opening requests</strong> — scheduled by week (choose a 1st + 2nd choice)</li>
                 </ul>
 
-                <div class="callout" style="margin-top:10px">
+                <div class="callout" id="openings_info" style="margin-top:10px">
                   <div class="fine2" style="margin:0 0 6px"><strong>Opening (standard) includes:</strong></div>
                   <div class="fine2" style="margin:0">
                     Remove plugs/gizmos, reconnect equipment, install baskets/fittings as needed, prime &amp; start system,
                     verify circulation, and a basic equipment check.
-                    <br><strong>Chemicals not included</strong> (available after opening if needed).
+                    
                   </div>
                   <div class="fine2" style="margin:8px 0 0">
                     <strong>Optional add-on:</strong> winter cover removal — removed, folded, and placed nearby (no cleaning).
@@ -157,35 +146,7 @@
 
                 <div class="subnote">Opening week selections are a request — we confirm availability after review.</div>
               </div>
-
-              <div class="card" style="background:#fff">
-                <h3>What “pre-season priority planning” means</h3>
-                <div class="fine2 muted" style="margin-top:-4px">
-                  The simple version: you get better timing options before the calendar fills up.
-                </div>
-
-                <div class="hr"></div>
-
-                <div class="fine2"><strong>What it is:</strong></div>
-                <ul class="bullets">
-                  <li>Early planning across multiple local homeowners during a pre-season window</li>
-                  <li>Measuring, ordering, and installs scheduled with fewer bottlenecks</li>
-                  <li>Clear go/no-go decisions before peak demand</li>
-                </ul>
-
-                <div class="fine2" style="margin-top:6px"><strong>What it isn’t:</strong></div>
-                <ul class="bullets">
-                  <li>Not a co-op</li>
-                  <li>Not pooled money</li>
-                  <li>Not a group purchase contract</li>
-                </ul>
-
-                <div class="fine2 muted" style="margin-top:6px">
-                  You remain the customer. Your project remains your project. Coordination simply improves timing and reduces friction.
-                </div>
-              </div>
-
-              <div class="card" style="background:#fff">
+<div class="card" style="background:#fff">
                 <h3>What we do (Urban Pools)</h3>
                 <p class="fine2" style="margin-top:-4px">We support pools already in the ground:</p>
                 <ul class="bullets">
@@ -212,54 +173,12 @@
 
             </div>
           </div>
-
-          <!-- PANEL: OPENINGS -->
-          <div id="panel_openings" class="hidden" role="tabpanel" aria-labelledby="tab_openings">
-            <div class="card" style="background:#fff">
-              <h3>Pool openings (requests)</h3>
-              <p class="fine2" style="margin-top:-4px">
-                Want to get ahead of the rush? Request an opening window now.
-              </p>
-              <ul class="bullets">
-                <li>Openings are scheduled by week (you choose a first and second choice)</li>
-                <li>We confirm availability after we review your request</li>
-                <li><strong>First opening with us includes a complimentary in-depth opening inspection</strong></li>
-              </ul>
-
-              <div class="callout" style="margin-top:10px">
-                <div class="fine2" style="margin:0 0 6px"><strong>Standard opening includes:</strong></div>
-                <div class="fine2" style="margin:0">
-                  Remove plugs/gizmos, reconnect equipment, install baskets/fittings as needed, prime &amp; start system,
-                  verify circulation, and a basic equipment check.
-                  <br><strong>Chemicals not included</strong> (available after opening if needed).
-                </div>
-                <div class="fine2" style="margin:8px 0 0">
-                  <strong>Optional add-on:</strong> winter cover removal — removed, folded, and placed nearby (no cleaning).
-                </div>
-              </div>
-
-              <p class="fine2 muted" style="margin-top:10px">
-                Use the form on the right to request your preferred week — it’s a request, not a confirmation.
-              </p>
-            </div>
-          </div>
-
-          <!-- PANEL: REQUEST -->
-          <div id="panel_request" class="hidden" role="tabpanel" aria-labelledby="tab_request">
-            <div class="card" style="background:#fff">
-              <h3>Request availability</h3>
-              <p class="fine2" style="margin-top:-4px">
-                Fill out the form and we’ll reply with next steps — timing, options, and what we need from you.
-              </p>
-              <p class="fine2 muted">Tip: include photos if you have them (liner, coping, cover, equipment pad).</p>
-            </div>
-          </div>
-
-        </div>
+</div>
 
         <!-- RIGHT COLUMN (FORM) -->
         <aside class="sticky">
-          <div class="card" style="background:#fff">
+          <div class="card" id="request" style="background:#fff">
+            <div id="request"></div>
             <h3 style="margin-bottom:6px">Request availability</h3>
             <p class="formMini">Pre-season planning + opening requests — we’ll reply with next steps.</p>
 
@@ -357,12 +276,16 @@
 
                 <div class="field">
                   <label class="label" for="p_open_week1">Preferred opening week (1st choice)</label>
-                  <input class="input" id="p_open_week1" name="preferred_opening_week_1" type="week" />
+                  <select class="select" id="p_open_week1" name="preferred_opening_week_1">
+                    <option value="">Select a week</option>
+                  </select>
                 </div>
 
                 <div class="field">
                   <label class="label" for="p_open_week2">Preferred opening week (2nd choice)</label>
-                  <input class="input" id="p_open_week2" name="preferred_opening_week_2" type="week" />
+                  <select class="select" id="p_open_week2" name="preferred_opening_week_2">
+                    <option value="">Select a week</option>
+                  </select>
                 </div>
 
                 <div class="smallCheck" style="margin-top:8px">
@@ -389,28 +312,7 @@
             </form>
           </div>
 
-          <div class="card" style="background:#fff; margin-top:14px">
-            <h3>Short FAQ</h3>
-
-            <div class="fine2"><strong>Do I have to commit to anything?</strong></div>
-            <div class="fine2 muted" style="margin-top:4px">No. This is information-first. If you want help, we’ll outline options and timing.</div>
-
-            <div class="hr"></div>
-
-            <div class="fine2"><strong>Is this a “buying group” or pooled order?</strong></div>
-            <div class="fine2 muted" style="margin-top:4px">No. It’s an early planning window to help homeowners get ahead of the seasonal rush.</div>
-
-            <div class="hr"></div>
-
-            <div class="fine2"><strong>How do opening requests work?</strong></div>
-            <div class="fine2 muted" style="margin-top:4px">Choose a first and second choice week. We reply to confirm (or suggest the closest available week).</div>
-
-            <div class="hr"></div>
-
-            <div class="fine2"><strong>What if I’m not sure what I need?</strong></div>
-            <div class="fine2 muted" style="margin-top:4px">That’s normal. Submit the form and we’ll help you sort it out quickly.</div>
-          </div>
-
+        
           <div class="card" style="background:#fff; margin-top:14px">
             <h3>Prefer to talk directly?</h3>
             <div class="fine2"><strong>Call/text:</strong> 260-414-5691</div>
@@ -444,7 +346,8 @@
 
 <script>
   // year
-  document.getElementById("y").textContent = new Date().getFullYear();
+  const y = document.getElementById("y");
+  if (y) y.textContent = new Date().getFullYear();
 
   // mobile menu
   const btn = document.querySelector(".menuBtn");
@@ -458,46 +361,79 @@
     });
   }
 
-  // tabs
-  const tabs = [
-    { tab: "tab_overview", panel: "panel_overview" },
-    { tab: "tab_openings", panel: "panel_openings" },
-    { tab: "tab_request", panel: "panel_request" }
-  ];
-
-  function setTab(activeTabId) {
-    tabs.forEach(({tab, panel}) => {
-      const t = document.getElementById(tab);
-      const p = document.getElementById(panel);
-      const isActive = tab === activeTabId;
-      if (t) t.setAttribute("aria-selected", isActive ? "true" : "false");
-      if (p) p.classList.toggle("hidden", !isActive);
-    });
-  }
-
-  tabs.forEach(({tab}) => {
-    const t = document.getElementById(tab);
-    if (t) t.addEventListener("click", () => setTab(tab));
-  });
-
-  // opening fields toggle
+  // opening fields toggle + week dropdown generation
   const openingCheckbox = document.getElementById("need_opening");
   const openingFields = document.getElementById("opening_fields");
+  const week1 = document.getElementById("p_open_week1");
+  const week2 = document.getElementById("p_open_week2");
+
+  function nextMonday(fromDate) {
+    const d = new Date(fromDate);
+    d.setHours(0, 0, 0, 0);
+    const day = d.getDay(); // 0=Sun
+    const diff = (8 - day) % 7 || 7; // days until next Monday
+    d.setDate(d.getDate() + diff);
+    return d;
+  }
+
+  function formatWeekLabel(d) {
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  }
+
+  function fillWeekSelect(selectEl, weeks) {
+    if (!selectEl) return;
+    // keep first placeholder option
+    const placeholder = selectEl.querySelector("option[value='']");
+    selectEl.innerHTML = "";
+    if (placeholder) selectEl.appendChild(placeholder);
+    else {
+      const opt = document.createElement("option");
+      opt.value = "";
+      opt.textContent = "Select a week";
+      selectEl.appendChild(opt);
+    }
+
+    weeks.forEach(({ value, label }) => {
+      const opt = document.createElement("option");
+      opt.value = value;
+      opt.textContent = label;
+      selectEl.appendChild(opt);
+    });
+
+    const optNS = document.createElement("option");
+    optNS.value = "Not sure yet";
+    optNS.textContent = "Not sure yet";
+    selectEl.appendChild(optNS);
+  }
+
+  function buildUpcomingWeeks(count = 14) {
+    const start = nextMonday(new Date());
+    const weeks = [];
+    for (let i = 0; i < count; i++) {
+      const d = new Date(start);
+      d.setDate(start.getDate() + i * 7);
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, "0");
+      const dd = String(d.getDate()).padStart(2, "0");
+      const value = `${yyyy}-${mm}-${dd}`; // ISO date
+      const label = `Week of ${formatWeekLabel(d)}`;
+      weeks.push({ value, label });
+    }
+    return weeks;
+  }
+
+  const weeks = buildUpcomingWeeks(16);
+  fillWeekSelect(week1, weeks);
+  fillWeekSelect(week2, weeks);
+
   function syncOpeningFields() {
     if (!openingCheckbox || !openingFields) return;
     openingFields.classList.toggle("hidden", !openingCheckbox.checked);
   }
+
   if (openingCheckbox) {
     openingCheckbox.addEventListener("change", syncOpeningFields);
     syncOpeningFields();
-  }
-
-  // "Request Info" button: open the request tab on click
-  const reqBtn = document.getElementById("btn_request");
-  if (reqBtn) {
-    reqBtn.addEventListener("click", () => {
-      setTab("tab_request");
-    });
   }
 </script>
 
