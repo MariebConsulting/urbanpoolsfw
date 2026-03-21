@@ -383,3 +383,12 @@ footer{
   .menuBtn{ display:none; }
   .mobileNav{ display:none !important; }
 }
+
+h1 { font-size: 34px !important; line-height: 1.08; }
+.lead { font-size: 15px !important; max-width: 760px; }
+.pill { font-size: 11px !important; padding: 6px 9px; }
+
+@media (max-width: 900px) {
+  h1 { font-size: 28px !important; }
+  .lead { font-size: 14px !important; }
+}
