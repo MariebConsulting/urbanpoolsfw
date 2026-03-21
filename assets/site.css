@@ -437,5 +437,89 @@ h1 { font-size: 34px !important; line-height: 1.08; }
     max-width:100%;
   }
 }
+/* MOBILE POLISH — SGM SECTION */
+@media (max-width: 900px) {
+  #sgm .sectionHead {
+    display: grid;
+    gap: 12px;
+  }
 
+  #sgm .sectionHead h2 {
+    font-size: 28px;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    max-width: 12ch;
+    margin: 0;
+  }
+
+  #sgm .sectionHead .sub {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 34ch;
+    margin: 0;
+  }
+
+  #sgm .sectionHead .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  #sgm .grid2 {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  #sgm .mediaCard {
+    padding: 10px;
+  }
+
+  #sgm .cardPhoto {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #sgm .grid2 > .card:last-child {
+    padding: 18px;
+  }
+
+  #sgm .grid2 > .card:last-child h3 {
+    font-size: 18px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  #sgm .grid2 > .card:last-child p {
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+
+  #sgm .grid3 {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+    margin-top: 14px !important;
+  }
+
+  #sgm .grid3 .card {
+    padding: 18px;
+  }
+
+  #sgm .grid3 .card h3 {
+    font-size: 17px;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  #sgm .grid3 .card p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
 
