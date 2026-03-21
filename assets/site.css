@@ -407,6 +407,35 @@ h1 { font-size: 34px !important; line-height: 1.08; }
   }
 }
 
+/* FORCE SGM SIDE-BY-SIDE */
+#sgm .grid2{
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap:18px;
+  align-items:center;
+}
 
+#sgm .mediaCard{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#sgm .cardPhoto{
+  max-width:380px;
+  width:100%;
+  height:auto;
+}
+
+/* mobile fallback */
+@media (max-width:900px){
+  #sgm .grid2{
+    grid-template-columns:1fr;
+  }
+
+  #sgm .cardPhoto{
+    max-width:100%;
+  }
+}
 
 
