@@ -392,3 +392,62 @@ h1 { font-size: 34px !important; line-height: 1.08; }
   h1 { font-size: 28px !important; }
   .lead { font-size: 14px !important; }
 }
+
+/* SGM section */
+.sgmBand{
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:18px;
+  align-items:center;
+}
+
+.sgmLogoCard{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(11,13,16,.06);
+}
+
+.sgmLogo{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  border-radius:10px;
+}
+
+.sgmCopy{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.8);
+  border-radius:18px;
+  padding:24px;
+  backdrop-filter: blur(3px);
+}
+
+.sgmCopy h3{
+  margin:0 0 10px;
+  font-size:24px;
+  line-height:1.1;
+}
+
+.sgmCopy p{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.5;
+}
+
+@media (max-width:900px){
+  .sgmBand{
+    grid-template-columns:1fr;
+  }
+
+  .sgmCopy{
+    padding:18px;
+  }
+
+  .sgmCopy h3{
+    font-size:20px;
+  }
+}
