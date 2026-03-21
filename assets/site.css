@@ -589,3 +589,45 @@ h1 { font-size: 34px !important; line-height: 1.08; }
     margin-top:20px;
   }
 }
+/* FORCE SGM IMAGE SIZE + LAYOUT FIX */
+.sgmBand{
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 0.65fr) !important;
+  gap: 22px !important;
+  align-items: center !important;
+}
+
+.sgmImageShell{
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.sgmHeroImage{
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* tighten right column so it doesn’t stretch weird */
+.sgmCopyCard{
+  max-width: 480px;
+}
+
+/* better balance on large screens */
+@media (min-width: 1400px){
+  .sgmHeroImage{
+    max-width: 780px;
+  }
+}
+
+/* mobile stays clean */
+@media (max-width: 900px){
+  .sgmHeroImage{
+    max-width: 100%;
+  }
+}
+.sgmImageShell{
+  padding: 12px !important;
+}
