@@ -408,72 +408,184 @@ h1 { font-size: 34px !important; line-height: 1.08; }
 }
 
 
+
 /* SGM section */
-.sgmBand{
-  display:grid;
-  grid-template-columns: 1.08fr .92fr;
-  gap:28px;
-  align-items:center;
-  margin-top:18px;
+.sgmSection{
+  position:relative;
+  overflow:hidden;
+  padding-top:56px;
+  padding-bottom:54px;
+  background:
+    radial-gradient(900px 420px at 78% 6%, rgba(0,0,0,.05), transparent 58%),
+    linear-gradient(180deg, rgba(11,13,16,.03), rgba(11,13,16,0));
 }
 
-.sgmImageWrap{
-  background:rgba(255,255,255,.72);
+.sgmSection::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-65px;
+  height:250px;
+  z-index:0;
+  pointer-events:none;
+  opacity:.68;
+  background-repeat:no-repeat;
+  background-position:center bottom;
+  background-size:cover;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23dfeaf7' fill-opacity='1' d='M0,224L48,208C96,192,192,160,288,149.3C384,139,480,149,576,176C672,203,768,245,864,245.3C960,245,1056,203,1152,181.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.sgmSection .wrap{
+  position:relative;
+  z-index:1;
+}
+
+.sgmHead{
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+
+.sgmHead h2{
+  margin:0 0 8px;
+  font-size:56px;
+  line-height:1.02;
+  letter-spacing:-.03em;
+}
+
+.sgmHead .sub{
+  margin:0;
+  font-size:24px;
+  line-height:1.35;
+  color:var(--muted);
+  max-width:900px;
+}
+
+.sgmBand{
+  display:grid;
+  grid-template-columns:minmax(0, 1.08fr) minmax(420px, .92fr);
+  gap:26px;
+  align-items:center;
+  margin-top:10px;
+}
+
+.sgmImageShell{
+  background:rgba(255,255,255,.74);
   border:1px solid var(--line);
-  border-radius:24px;
+  border-radius:26px;
   padding:18px;
-  box-shadow:0 16px 44px rgba(11,13,16,.08);
-  backdrop-filter:blur(3px);
+  box-shadow:0 18px 48px rgba(11,13,16,.08);
 }
 
 .sgmHeroImage{
   width:100%;
   height:auto;
   display:block;
-  border-radius:14px;
+  border-radius:16px;
 }
 
 .sgmCopyCard{
+  background:rgba(255,255,255,.84);
   border:1px solid var(--line);
-  background:rgba(255,255,255,.78);
   border-radius:24px;
-  padding:28px;
-  box-shadow:0 16px 44px rgba(11,13,16,.06);
-  backdrop-filter:blur(3px);
+  padding:34px 34px 30px;
+  box-shadow:0 14px 38px rgba(11,13,16,.06);
+  backdrop-filter:blur(4px);
 }
 
 .sgmCopyCard h3{
-  margin:0 0 12px;
-  font-size:28px;
+  margin:0 0 18px;
+  font-size:33px;
   line-height:1.08;
+  letter-spacing:-.02em;
+}
+
+.sgmCopyCard h3 span{
+  color:#1f5f96;
 }
 
 .sgmCopyCard p{
-  margin:0 0 14px;
-  font-size:15px;
-  line-height:1.6;
+  margin:0 0 18px;
   color:var(--muted);
+  font-size:17px;
+  line-height:1.62;
 }
 
 .sgmCards{
-  margin-top:22px;
+  margin-top:28px;
 }
 
 .sgmCards .card{
   min-height:100%;
 }
 
+.sgmCards .card h3{
+  font-size:24px;
+  line-height:1.15;
+}
+
+.sgmCards .card p{
+  font-size:17px;
+  line-height:1.62;
+}
+
+@media (max-width: 1200px){
+  .sgmHead h2{
+    font-size:48px;
+  }
+
+  .sgmHead .sub{
+    font-size:21px;
+  }
+
+  .sgmCopyCard h3{
+    font-size:29px;
+  }
+}
+
 @media (max-width: 900px){
+  .sgmSection{
+    padding-top:42px;
+    padding-bottom:42px;
+  }
+
+  .sgmHead{
+    gap:14px;
+  }
+
+  .sgmHead h2{
+    font-size:36px;
+  }
+
+  .sgmHead .sub{
+    font-size:18px;
+  }
+
   .sgmBand{
     grid-template-columns:1fr;
     gap:18px;
   }
 
+  .sgmImageShell{
+    padding:12px;
+    border-radius:20px;
+  }
+
   .sgmCopyCard{
-    padding:20px;
+    padding:22px;
+    border-radius:20px;
   }
 
   .sgmCopyCard h3{
-    font-size:22px;
+    font-size:24px;
+  }
+
+  .sgmCopyCard p,
+  .sgmCards .card p{
+    font-size:16px;
+  }
+
+  .sgmCards{
+    margin-top:20px;
   }
 }
