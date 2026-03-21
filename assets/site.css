@@ -409,31 +409,14 @@ h1 { font-size: 34px !important; line-height: 1.08; }
 
 
 
-/* SGM section */
+/* SGM section - normalized to match site rhythm */
 .sgmSection{
-  position:relative;
-  overflow:hidden;
-  padding-top:56px;
-  padding-bottom:54px;
-  background:
-    radial-gradient(900px 420px at 78% 6%, rgba(0,0,0,.05), transparent 58%),
-    linear-gradient(180deg, rgba(11,13,16,.03), rgba(11,13,16,0));
+  padding:34px 0;
+  background:transparent;
 }
 
 .sgmSection::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:-65px;
-  height:250px;
-  z-index:0;
-  pointer-events:none;
-  opacity:.68;
-  background-repeat:no-repeat;
-  background-position:center bottom;
-  background-size:cover;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23dfeaf7' fill-opacity='1' d='M0,224L48,208C96,192,192,160,288,149.3C384,139,480,149,576,176C672,203,768,245,864,245.3C960,245,1056,203,1152,181.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  display:none;
 }
 
 .sgmSection .wrap{
@@ -442,192 +425,113 @@ h1 { font-size: 34px !important; line-height: 1.08; }
 }
 
 .sgmHead{
-  align-items:flex-start;
-  margin-bottom:18px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:14px;
 }
 
 .sgmHead h2{
-  margin:0 0 8px;
-  font-size:56px;
-  line-height:1.02;
-  letter-spacing:-.03em;
+  margin:0;
+  font-size:24px;
+  line-height:1.15;
+  letter-spacing:0;
 }
 
 .sgmHead .sub{
   margin:0;
-  font-size:24px;
-  line-height:1.35;
   color:var(--muted);
-  max-width:900px;
+  font-size:14px;
+  line-height:1.45;
+  max-width:none;
 }
 
 .sgmBand{
   display:grid;
-  grid-template-columns:minmax(0, 1.08fr) minmax(420px, .92fr);
-  gap:26px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+  gap:14px;
   align-items:center;
-  margin-top:10px;
+  margin-top:0;
 }
 
 .sgmImageShell{
-  background:rgba(255,255,255,.74);
+  background:#fff;
   border:1px solid var(--line);
-  border-radius:26px;
-  padding:18px;
-  box-shadow:0 18px 48px rgba(11,13,16,.08);
+  border-radius:var(--r);
+  padding:14px;
+  box-shadow:none;
+  max-width:none;
+  margin:0;
 }
 
 .sgmHeroImage{
   width:100%;
+  max-width:100%;
   height:auto;
   display:block;
-  border-radius:16px;
+  object-fit:contain;
+  margin:0;
+  border-radius:10px;
 }
 
 .sgmCopyCard{
-  background:rgba(255,255,255,.84);
+  background:#fff;
   border:1px solid var(--line);
-  border-radius:24px;
-  padding:34px 34px 30px;
-  box-shadow:0 14px 38px rgba(11,13,16,.06);
-  backdrop-filter:blur(4px);
+  border-radius:var(--r);
+  padding:24px;
+  box-shadow:none;
+  backdrop-filter:none;
+  max-width:none;
 }
 
 .sgmCopyCard h3{
-  margin:0 0 18px;
-  font-size:33px;
-  line-height:1.08;
-  letter-spacing:-.02em;
+  margin:0 0 10px;
+  font-size:16px;
+  line-height:1.15;
+  letter-spacing:0;
 }
 
 .sgmCopyCard h3 span{
-  color:#1f5f96;
+  color:inherit;
 }
 
 .sgmCopyCard p{
-  margin:0 0 18px;
+  margin:0 0 14px;
   color:var(--muted);
-  font-size:17px;
-  line-height:1.62;
+  font-size:14px;
+  line-height:1.55;
 }
 
 .sgmCards{
-  margin-top:28px;
+  margin-top:14px;
 }
 
 .sgmCards .card{
-  min-height:100%;
+  min-height:160px;
 }
 
 .sgmCards .card h3{
-  font-size:24px;
+  font-size:16px;
   line-height:1.15;
 }
 
 .sgmCards .card p{
-  font-size:17px;
-  line-height:1.62;
+  font-size:14px;
+  line-height:1.5;
 }
 
-@media (max-width: 1200px){
-  .sgmHead h2{
-    font-size:48px;
-  }
-
-  .sgmHead .sub{
-    font-size:21px;
-  }
-
-  .sgmCopyCard h3{
-    font-size:29px;
-  }
-}
-
-@media (max-width: 900px){
-  .sgmSection{
-    padding-top:42px;
-    padding-bottom:42px;
-  }
-
+@media (max-width:900px){
   .sgmHead{
-    gap:14px;
-  }
-
-  .sgmHead h2{
-    font-size:36px;
-  }
-
-  .sgmHead .sub{
-    font-size:18px;
+    align-items:flex-start;
   }
 
   .sgmBand{
     grid-template-columns:1fr;
-    gap:18px;
   }
 
-  .sgmImageShell{
-    padding:12px;
-    border-radius:20px;
-  }
-
+  .sgmImageShell,
   .sgmCopyCard{
-    padding:22px;
-    border-radius:20px;
+    padding:18px;
   }
-
-  .sgmCopyCard h3{
-    font-size:24px;
-  }
-
-  .sgmCopyCard p,
-  .sgmCards .card p{
-    font-size:16px;
-  }
-
-  .sgmCards{
-    margin-top:20px;
-  }
-}
-/* FORCE SGM IMAGE SIZE + LAYOUT FIX */
-.sgmBand{
-  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 0.65fr) !important;
-  gap: 22px !important;
-  align-items: center !important;
-}
-
-.sgmImageShell{
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.sgmHeroImage{
-  width: 100%;
-  max-width: 720px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-/* tighten right column so it doesn’t stretch weird */
-.sgmCopyCard{
-  max-width: 480px;
-}
-
-/* better balance on large screens */
-@media (min-width: 1400px){
-  .sgmHeroImage{
-    max-width: 780px;
-  }
-}
-
-/* mobile stays clean */
-@media (max-width: 900px){
-  .sgmHeroImage{
-    max-width: 100%;
-  }
-}
-.sgmImageShell{
-  padding: 12px !important;
 }
