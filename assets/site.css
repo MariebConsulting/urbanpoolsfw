@@ -1,4 +1,4 @@
-﻿:root{
+:root{
   --bg:#ffffff;
   --text:#0b0d10;
   --muted:#5b6470;
@@ -272,9 +272,7 @@ footer{
 }
 .textarea{resize:vertical; min-height:110px}
 
-/* =========================
-   Top Openings Bar (temporary)
-   ========================= */
+/* Top information bar */
 .topBar{
   background:rgba(255,255,255,.96);
   border-bottom:1px solid var(--line);
@@ -376,6 +374,7 @@ footer{
   .topBarForm{ width:100%; justify-content:flex-start; }
   .topInput, .topSelect{ min-width:0; width:100%; }
   .topBtn{ width:100%; }
+  .topBarForm .btn{ width:100%; }
 }
 
 @media (min-width: 901px){
